@@ -24,29 +24,21 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
 ### Response
 *Sample Response
   
-   {
-      "animalId" : 1
-      "name" : "Husky"
-      "scientificName" : "Canine lupus familiaris"
-      "species" : "Dog"
-      "habitat" : "Indoors"
-      "description" : "A misc. dog description"
+  {
+    "animalId" : 1
+    "name" : "Hercules Beetle"
+    "scientificName" : "Dynastes hercules"
+    "species" : "Beetle"
+    "habitat" : "Rainforest"
+    "description" : "A misc. hercules beetle description"
   }
   {
     "animalId" : 2
-    "name" : "Domestic Short Hair"
-    "scientificName" : "Felis catus"
-    "species" : "Cat"
-    "habitat" : "Indoors"
-    "description" : "A misc. DSH description"
-  }
-  {
-    "animalId" : 3
-    "name" : "Persian"
-    "scientificName" : "Felis catus"
-    "species" : "Cat"
-    "habitat" : "Indoors"
-    "description" : "A misc. Persian Description"
+    "name" : "Blister Beetle"
+    "scientificName" : "Meloidae"
+    "species" : "Beetle"
+    "habitat" : "Arid areas"
+    "description" : "A misc. blister beetle Description"
   }
   
 ## Search an animal object by its ID
@@ -59,11 +51,11 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
 
   {
     "animalId" : 2
-    "name" : "Domestic Short Hair"
-    "scientificName" : "Felis catus"
-    "species" : "Cat"
-    "habitat" : "Indoors"
-    "description" : "A misc. DSH description"
+    "name" : "Blister Beetle"
+    "scientificName" : "Meloidae"
+    "species" : "Beetle"
+    "habitat" : "Arid areas"
+    "description" : "A misc. blister beetle Description"
   }
  
 
@@ -75,7 +67,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
 ### Response
 
   {
-    "animalId" : 7
+    "animalId" : 1
     "name" : "Hercules Beetle"
     "scientificName" : "Dynastes hercules"
     "species" : "Beetle"
@@ -83,7 +75,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
     "description" : "A misc. hercules beetle description"
   }
   {
-    "animalId" : 9
+    "animalId" : 2
     "name" : "Blister Beetle"
     "scientificName" : "Meloidae"
     "species" : "Beetle"
@@ -98,9 +90,9 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
   http://localhost:8080/animals?species=beetle
 
 ### Response
-[
+
   {
-    "animalId" : 7
+    "animalId" : 1
     "name" : "Hercules Beetle"
     "scientificName" : "Dynastes hercules"
     "species" : "Beetle"
@@ -108,14 +100,14 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
     "description" : "A misc. hercules beetle description"
   }
   {
-    "animalId" : 9
+    "animalId" : 2
     "name" : "Blister Beetle"
     "scientificName" : "Meloidae"
     "species" : "Beetle"
     "habitat" : "Arid areas"
     "description" : "A misc. blister beetle description"
   }
-]
+
 
 ## Create a new animal object. (Like the demo it returns the whole database of animals objects.)
 ### Request
@@ -124,7 +116,6 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
   http://localhost:8080/animals/new
   *JSON body:
   {
-    "animalId" : 72
     "name" : "Ladybug"
     "scientificName" : "Coccinellidae"
     "species" : "Beetle"
@@ -135,7 +126,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
 ### Response
 
   {
-    "animalId" : 7
+    "animalId" : 1
     "name" : "Hercules Beetle"
     "scientificName" : "Dynastes hercules"
     "species" : "Beetle"
@@ -143,7 +134,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
     "description" : "A misc. hercules beetle description"
   }
   {
-    "animalId" : 9
+    "animalId" : 2
     "name" : "Blister Beetle"
     "scientificName" : "Meloidae"
     "species" : "Beetle"
@@ -151,7 +142,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
     "description" : "A misc. blister beetle description"
   }
   {
-    "animalId" : 72
+    "animalId" : 3
     "name" : "Ladybug"
     "scientificName" : "Coccinellidae"
     "species" : "Beetle"
@@ -163,10 +154,10 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
 ### Request
   Put: animals/update/{animalId}
 
-  http://localhost:8080/animals/update/72
+  http://localhost:8080/animals/update/3
   *JSON body:
   {
-    "animalId" : 72
+    "animalId" : 3
     "name" : "Ladybug"
     "scientificName" : "Coccinellidae"
     "species" : "Beetle"
@@ -175,7 +166,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
   }
 ### Response
   {
-    "animalId" : 72
+    "animalId" : 3
     "name" : "Ladybug"
     "scientificName" : "Coccinellidae"
     "species" : "Beetle"
@@ -191,7 +182,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
 ### Response
 
   {
-    "animalId" : 7
+    "animalId" : 1
     "name" : "Hercules Beetle"
     "scientificName" : "Dynastes hercules"
     "species" : "Beetle"
@@ -199,7 +190,7 @@ This API peforms CRUD operations on animal objects in a local database. Info bel
     "description" : "A misc. hercules beetle description"
   }
   {
-    "animalId" : 9
+    "animalId" : 2
     "name" : "Blister Beetle"
     "scientificName" : "Meloidae"
     "species" : "Beetle"
